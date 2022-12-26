@@ -45,5 +45,6 @@ class EC2InstanceStack(Stack):
             )
 
 app = App()
-EC2InstanceStack(app, "ec2-instance", env={"region":"us-west-2"})
+EC2InstanceStack(app, "ec2-instance-fra", env={"region":"eu-west-1"})
+EC2InstanceStack(app, "ec2-instance-lon", env={"region":"eu-west-2"})
 app.synth()

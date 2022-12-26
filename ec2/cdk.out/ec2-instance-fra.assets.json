@@ -1,0 +1,20 @@
+{
+  "version": "22.0.0",
+  "files": {
+    "c04fd6f390c89c0b7cd6ba9e0b57f71a8c3245300bb1620357294258ab7e79b6": {
+      "source": {
+        "path": "ec2-instance-fra.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-eu-west-1": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-eu-west-1",
+          "objectKey": "c04fd6f390c89c0b7cd6ba9e0b57f71a8c3245300bb1620357294258ab7e79b6.json",
+          "region": "eu-west-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-eu-west-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

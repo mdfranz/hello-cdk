@@ -1,0 +1,19 @@
+{
+  "version": "22.0.0",
+  "files": {
+    "fddde7173a369dd65580496222e0bc042494e32c43396d626731f83b9bcc37c8": {
+      "source": {
+        "path": "LambdaCronExample.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "fddde7173a369dd65580496222e0bc042494e32c43396d626731f83b9bcc37c8.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
