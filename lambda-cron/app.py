@@ -17,8 +17,8 @@ class LambdaCronStack(Stack):
             self, "Singleton",
             code=lambda_.InlineCode(handler_code),
             handler="index.main",
-            timeout=Duration.seconds(30),
-            runtime=lambda_.Runtime.PYTHON_3_9,
+            timeout=Duration.seconds(300),
+            runtime=lambda_.Runtime.PYTHON_3_7,
         )
 
         # Run every day at 6PM UTC
@@ -27,12 +27,13 @@ class LambdaCronStack(Stack):
             self, "Rule",
             schedule=events.Schedule.cron(
                 minute='0',
-                hour='9',
+                hour='18',
                 month='*',
                 week_day='MON-FRI',
                 year='*'),
         )
         rule.add_target(targets.LambdaFunction(lambdaFn))
+
 
 app = App()
 LambdaCronStack(app, "LambdaCronExample")

@@ -1,0 +1,20 @@
+{
+  "version": "22.0.0",
+  "files": {
+    "83fd88486663f6d679cf07ce3e9dd0bd00d8e1335300606d1a6a8d2914ae8d5e": {
+      "source": {
+        "path": "OpensearchStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-eu-central-1": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-eu-central-1",
+          "objectKey": "83fd88486663f6d679cf07ce3e9dd0bd00d8e1335300606d1a6a8d2914ae8d5e.json",
+          "region": "eu-central-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-eu-central-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
